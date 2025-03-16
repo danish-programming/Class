@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>  // Include for strcmp and strcspn
+
+int main() {
+    char user_input[100];  // Declare a character array for input
+
+    printf("my dog\n");
+    fgets(user_input, sizeof(user_input), stdin);  // Read user input
+
+    user_input[strcspn(user_input, "\n")] = '\0';  // Remove trailing newline
+
+    if (strcmp(user_input, "dog") == 0) {
+        printf("woof woof\n");
+    } else {
+        printf("didn't type dog\n");
+    }
+
+    return 0;
+}
