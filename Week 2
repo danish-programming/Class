@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>  // Include for strcmp and strcspn
 
-int main() {
+int main(void) {
     char user_input[100];  // Declare a character array for input
 
     printf("my dog\n");
